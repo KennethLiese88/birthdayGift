@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <title>Final Fatasy Deluxe</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Final Fantasy Deluxe</h1>
+    <section id="select">
+        <div class="box" id="newGame">
+            <a href="./gratulation.html" target="_blank">New Game</a>
+        </div>
+        <div class="box" id="continue">
+            <a href="#">Continue</a>
+        </div>
+        <div class="box" id="loadGame">
+            <a href="#">Load Game</a>
+        </div>
+        <div id="message"></div>
+    </section>
+    <div>
+        <hr>
+        <p>created by Kenneth</p>
+    </div>
+    <div class="elements">
+        <div class="lumina"></div>
+        <div class="lumina"></div>
+        <div class="lumina"></div>
+        <div class="lumina"></div>
+        <div class="lumina"></div>
+        <div class="lumina"></div>
+    </div>
+    <script>
+        const message = document.querySelector("#message");
+        const selection = document.querySelector("#select");
+        console.log(message);
+
+        selection.addEventListener("click", event => {
+            const target = event.target.closest(".box");
+
+            if (target && target.id === "continue") {
+                event.preventDefault();
+                message.textContent = "No ongoing Game";
+                message.style.display = "block";
+            }
+            if (target && target.id === "loadGame"){
+                event.preventDefault();
+                message.textContent = "No Save Data";
+                message.style.display = "block";
+            }
+        });
+        
+        document.addEventListener("click", event => {
+            const target = event.target.closest(".box");
+            if (!target) {
+                message.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
