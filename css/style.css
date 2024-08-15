@@ -1,30 +1,14 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 * {
     padding: 0;
     margin: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     height: 100vh;
     background-color: black;
     background-image: url("../img/HD-wallpaper-buster-sword-final-fantasy-vii.jpg");
@@ -61,17 +45,11 @@ a:hover {
     opacity: 0.6;
     padding: 10px;
     margin: 10px;
-    -webkit-transition: -webkit-transform 0.3s ease;
-    transition: -webkit-transform 0.3s ease;
-    -o-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .box:hover {
-    -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
     outline: 1px solid gray;
 }
 
@@ -99,75 +77,50 @@ p {
 
 .elements {
     width: 25%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
 }
 
 .lumina {
     width: 6px;
     aspect-ratio: 1;
     background-color: rgba(255, 255, 255, 0.286);
-    -webkit-box-shadow: 0 0 10px white;
-            box-shadow: 0 0 10px white;
+    box-shadow: 0 0 10px white;
     border-radius: 50%;
     opacity: 0;
 }
 
-@-webkit-keyframes lumina {
-    from {
-      -webkit-transform: translateY(200px);
-              transform: translateY(200px);
-      opacity: 0;
-    }
-    to {
-      -webkit-transform: translateY(-1200px);
-              transform: translateY(-1200px);
-      opacity: 1;
-    }
-  }
-
 @keyframes lumina {
     from {
-      -webkit-transform: translateY(200px);
-              transform: translateY(200px);
+      transform: translateY(200px);
       opacity: 0;
     }
     to {
-      -webkit-transform: translateY(-1200px);
-              transform: translateY(-1200px);
+      transform: translateY(-1200px);
       opacity: 1;
     }
   }
   
   .elements div:nth-of-type(1) {
-    -webkit-animation: lumina 10s linear 3s infinite;
-            animation: lumina 10s linear 3s infinite;
+    animation: lumina 10s linear 3s infinite;
   }
   
   .elements div:nth-of-type(2) {
-    -webkit-animation: lumina 9s linear 8s infinite;
-            animation: lumina 9s linear 8s infinite;
+    animation: lumina 9s linear 8s infinite;
   }
   
   .elements div:nth-of-type(3) {
-    -webkit-animation: lumina 10s linear 0.7s infinite;
-            animation: lumina 10s linear 0.7s infinite;
+    animation: lumina 10s linear 0.7s infinite;
   }
   
   .elements div:nth-of-type(4) {
-    -webkit-animation: lumina 10s linear 3.3s infinite;
-            animation: lumina 10s linear 3.3s infinite;
+    animation: lumina 10s linear 3.3s infinite;
   }
   
   .elements div:nth-of-type(5) {
-    -webkit-animation: lumina 12s linear 12s infinite;
-            animation: lumina 12s linear 12s infinite;
+    animation: lumina 12s linear 12s infinite;
   }
   
   .elements div:nth-of-type(6) {
-    -webkit-animation: lumina 6s linear 1.5s infinite;
-            animation: lumina 6s linear 1.5s infinite;
+    animation: lumina 6s linear 1.5s infinite;
   }

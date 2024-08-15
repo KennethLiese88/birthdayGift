@@ -4,3 +4,33 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+    background-color: white;
+    background-image: url("../img/cloud.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section {
+    width: 300px;
+    height: fit-content;
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.564);
+    color: white;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.continue {
+    width: 330px;
+    text-align: end;
+    margin: 10px;
+}
